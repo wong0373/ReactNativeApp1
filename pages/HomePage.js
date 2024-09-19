@@ -5,10 +5,17 @@ export default function HomePage({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Text>Hello React Native</Text>
+        <Text style={styles.text}>
+          Hello React Native, I am Terry trying to build my first React Native
+          App!
+        </Text>
         <Button
           title="About Page"
           onPress={() => navigation.navigate("About")}
+        ></Button>
+        <Button
+          title="List Page"
+          onPress={() => navigation.navigate("List")}
         ></Button>
         <StatusBar style="auto" />
       </View>
@@ -22,6 +29,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    // paddingTop: 48,
+  },
+  text: {
+    fontSize: 20,
+    textAlign: "center",
+    padding: 16,
   },
 });

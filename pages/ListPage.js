@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Pressable,
 } from "react-native";
 
 export default function ListPage({ navigation }) {
@@ -18,7 +19,7 @@ export default function ListPage({ navigation }) {
             style={{
               padding: 16,
               fontSize: 20,
-              backgroundColor: "aqua",
+              backgroundColor: "#397872b3",
               margin: 2,
             }}
           >
@@ -26,7 +27,13 @@ export default function ListPage({ navigation }) {
           </Text>
         )}
         keyExtractor={(item) => item.id}
+        style={{ flex: 1 }}
       />
+      <Pressable onPress={() => navigation.navigate("Home")}>
+        <View style={styles.button}>
+          <Text style={styles.buttonText}>Home</Text>
+        </View>
+      </Pressable>
     </SafeAreaView>
   );
 }
@@ -120,9 +127,21 @@ const data = [
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     // alignItems: "center",
     justifyContent: "center",
     // paddingTop: 48,
+  },
+  button: {
+    backgroundColor: "#007AFF", // You can change the color
+    paddingVertical: 15, // Adjust vertical padding for height
+    paddingHorizontal: 30, // Adjust horizontal padding for width
+    borderRadius: 5, // Rounded corners
+    margin: 2,
+  },
+  buttonText: {
+    color: "#fff", // Text color
+    fontSize: 18, // Text size
+    fontWeight: "bold",
+    textAlign: "center",
   },
 });

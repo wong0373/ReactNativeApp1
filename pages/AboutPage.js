@@ -11,19 +11,16 @@ import {
 export default function AboutPage({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>
+      <ScrollView contentContainerStyle={styles.contentContainer}>
         <View>
-          <Button
-            title="Home Page"
-            onPress={() => navigation.navigate("Home")}
-          ></Button>
           <Image
-            source={require("../assets/dog.png")}
+            source={require("../assets/terriermon.png")}
             style={{
-              borderColor: "#eee",
-              borderWidth: 5,
+              flex: 1,
+              height: 300,
               width: 300,
-              height: 400,
+              justifyContent: "center",
+              alignItems: "center",
             }}
           />
           <Text>
@@ -69,6 +66,11 @@ export default function AboutPage({ navigation }) {
             molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
             nulla pariatur?
           </Text>
+          <Button
+            styles={styles.button}
+            title="Home Page"
+            onPress={() => navigation.navigate("Home")}
+          ></Button>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -76,11 +78,23 @@ export default function AboutPage({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+  button: {
+    paddingVertical: 15, // Adjust vertical padding for height
+    paddingHorizontal: 30, // Adjust horizontal padding for width
+    borderRadius: 5, // Rounded corners
+    margin: 2,
+  },
+  buttonText: {
+    color: "#fff", // Text color
+  },
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    // alignItems: "center",
-    // justifyContent: "center",
-    // paddingTop: 48,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: 48,
+  },
+  contentContainer: {
+    paddingHorizontal: 30,
   },
 });
