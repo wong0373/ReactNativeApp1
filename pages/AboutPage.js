@@ -79,13 +79,12 @@ export default function AboutPage({ navigation }) {
 
 const styles = StyleSheet.create({
   button: {
-    paddingVertical: 15, // Adjust vertical padding for height
-    paddingHorizontal: 30, // Adjust horizontal padding for width
-    borderRadius: 5, // Rounded corners
+    paddingHorizontal: 50,
+    borderRadius: 5,
     margin: 2,
   },
   buttonText: {
-    color: "#fff", // Text color
+    color: "#fff",
   },
   container: {
     flex: 1,

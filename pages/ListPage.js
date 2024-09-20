@@ -18,9 +18,9 @@ export default function ListPage({ navigation }) {
           <Text
             style={{
               padding: 16,
-              fontSize: 20,
+              fontSize: 30,
               backgroundColor: "#397872b3",
-              margin: 2,
+              margin: 4,
             }}
           >
             {item.title}
@@ -124,6 +124,7 @@ const data = [
     title: "Item 21",
   },
 ];
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -134,9 +135,9 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "#007AFF", // You can change the color
     paddingVertical: 15, // Adjust vertical padding for height
-    paddingHorizontal: 30, // Adjust horizontal padding for width
+    paddingHorizontal: 15, // Adjust horizontal padding for width
     borderRadius: 5, // Rounded corners
-    margin: 2,
+    margin: 20,
   },
   buttonText: {
     color: "#fff", // Text color
