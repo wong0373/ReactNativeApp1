@@ -34,6 +34,11 @@ export default function ListPage({ navigation }) {
           <Text style={styles.buttonText}>Home</Text>
         </View>
       </Pressable>
+      <Pressable onPress={() => navigation.navigate("About")}>
+        <View style={styles.button}>
+          <Text style={styles.buttonText}>About</Text>
+        </View>
+      </Pressable>
     </SafeAreaView>
   );
 }
@@ -130,6 +135,7 @@ const styles = StyleSheet.create({
     flex: 1,
     // alignItems: "center",
     justifyContent: "center",
+    margin: 10,
     // paddingTop: 48,
   },
   button: {
@@ -137,7 +143,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15, // Adjust vertical padding for height
     paddingHorizontal: 15, // Adjust horizontal padding for width
     borderRadius: 5, // Rounded corners
-    margin: 20,
+    margin: 7,
   },
   buttonText: {
     color: "#fff", // Text color

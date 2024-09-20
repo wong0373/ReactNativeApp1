@@ -71,6 +71,11 @@ export default function AboutPage({ navigation }) {
             title="Home Page"
             onPress={() => navigation.navigate("Home")}
           ></Button>
+          <Button
+            styles={styles.button}
+            title="List Page"
+            onPress={() => navigation.navigate("List")}
+          ></Button>
         </View>
       </ScrollView>
     </SafeAreaView>
